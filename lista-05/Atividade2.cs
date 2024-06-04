@@ -4,10 +4,11 @@ public class Atividade2
 {
     public static void Questao()
     {
+        Console.WriteLine("Faça um procedimento que preencha um vetor com as notas de uma turma de 10 alunos. Faça\r\num outro procedimento que receba um vetor preenchido com as notas, calcule a média da\r\nturma e conte quantos alunos obtiveram nota acima da média. Esse procedimento deve exibir\r\na média e o resultado da contagem. Faça um programa que declare as devidas variáveis e\r\nacione os procedimentos.");
+        Console.WriteLine();
         int[] vetor = new int[10];
         Preencher(vetor);
         Imprimir(vetor);
-
     }
 
     public static void Preencher(int[] vetor)
@@ -45,19 +46,6 @@ public class Atividade2
                 contador++;
             }
         }
-        Console.WriteLine("A média dos alunos foram {0} e {1} alunos ficaram acima da média", media, contador);
-    }
-
-    public double CalculaMedia(int[] vetor)
-	{
-        double media = 0;
-        double soma = 0;
-
-        for (int i = 0; i < vetor.Length; i++)
-        {
-            soma += vetor[i];
-        }
-        media = soma / 10;
-        return media;
+        Console.WriteLine("A média dos alunos foram {0:0} e {1} alunos ficaram acima da média", media, contador);
     }
 }

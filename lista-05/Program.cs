@@ -9,54 +9,55 @@ public class Program
     }
     public static void Main(string[] args)
     {
-        Console.WriteLine("Digite o número da questão que deseja executar (1-10):");
-        int questao = int.Parse(Console.ReadLine());
-
-        switch (questao)
+        int questao;
+        do
         {
-            case 1:
-                Atividade1.Questao();
+            Console.WriteLine("Digite o número da questão que deseja executar (1-10):");
+            if (int.TryParse(Console.ReadLine(), out questao))
+            {
+                switch (questao)
+                {
+                    case 1:
+                        Atividade1.Questao();
+                        break;
+                    case 2:
+                        Atividade2.Questao();
+                        break;
+                    case 3:
+                        Atividade3.Questao();
+                        break;
+                    case 4:
+                        Atividade4.Questao();
+                        break;
+                    case 5:
+                        Atividade5.Questao();
+                        break;
+                    case 6:
+                        Atividade6.Questao();
+                        break;
+                    case 7:
+                        Atividade7.Questao();
+                        break;
+                    case 8:
+                        Atividade8.Questao();
+                        break;
+                    case 9:
+                        Atividade9.Questao();
+                        break;
+                    case 10:
+                        Atividade10.Questao();
+                        break;
+                    default:
+                        Console.WriteLine("Questão inválida.");
+                        break;
+                }
                 VoltarAoMenu();
-                break;
-            case 2:
-                Atividade2.Questao();
-                VoltarAoMenu();
-                break;
-            case 3:
-                Atividade3.Questao();
-                VoltarAoMenu();
-                break;
-            case 4:
-                Atividade4.Questao();
-                VoltarAoMenu();
-                break;
-            case 5:
-                Atividade5.Questao();
-                VoltarAoMenu();
-                break;
-            case 6:
-                Atividade6.Questao();
-                VoltarAoMenu();
-                break;
-            case 7:
-                Atividade7.Questao();
-                VoltarAoMenu();
-                break;
-            case 8:
-                Atividade8.Questao();
-                VoltarAoMenu();
-                break;
-            case 9:
-                Atividade9.Questao();
-                VoltarAoMenu();
-                break;
-            case 10:
-                Atividade10.Questao();
-                VoltarAoMenu();
-                break;
-            default:
-                Console.WriteLine("Questão inválida.");
-                break;
-        }
+            }
+            else
+            {
+                Console.WriteLine("Entrada inválida. Digite um número válido.");
+            }
+        } while (questao != 10); // Repete até que o usuário escolha sair
     }
 }
+  
