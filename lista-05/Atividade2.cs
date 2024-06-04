@@ -37,4 +37,3 @@ public class Atividade2
 		Imprimir(vetor);
 
 	}
-}
