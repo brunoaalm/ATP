@@ -1,13 +1,13 @@
-﻿namespace lista_05;
-
-internal class Program
+﻿using System;
+namespace lista_05;
+public class Program
 {
     public static void VoltarAoMenu()
     {
         Console.WriteLine("\nAperte alguma tecla para voltar ao menu");
         Console.ReadKey();
     }
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         Console.WriteLine("Digite o número da questão que deseja executar (1-10):");
         int questao = int.Parse(Console.ReadLine());
